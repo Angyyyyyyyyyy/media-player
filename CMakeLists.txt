@@ -3,3 +3,5 @@ project(mediaplayer VERSION 0.1.0 LANGUAGES C CXX)
 
 add_executable(mediaplayer "main.cpp" "main.h")
 
+target_link_libraries(mediaplayer mThread)
+add_subdirectory("mThread")

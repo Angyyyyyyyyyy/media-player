@@ -1,3 +1,6 @@
 /Users/alex/Desktop/mediaplayer/build/CMakeFiles/mediaplayer.dir
 /Users/alex/Desktop/mediaplayer/build/CMakeFiles/edit_cache.dir
 /Users/alex/Desktop/mediaplayer/build/CMakeFiles/rebuild_cache.dir
+/Users/alex/Desktop/mediaplayer/build/mThread/CMakeFiles/mThread.dir
+/Users/alex/Desktop/mediaplayer/build/mThread/CMakeFiles/edit_cache.dir
+/Users/alex/Desktop/mediaplayer/build/mThread/CMakeFiles/rebuild_cache.dir

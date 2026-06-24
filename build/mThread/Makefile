@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles /Users/alex/Desktop/mediaplayer/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/alex/Desktop/mediaplayer/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles /Users/alex/Desktop/mediaplayer/build/mThread//CMakeFiles/progress.marks
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/alex/Desktop/mediaplayer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named mediaplayer
+# Convenience name for target.
+mThread/CMakeFiles/mThread.dir/rule:
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/CMakeFiles/mThread.dir/rule
+.PHONY : mThread/CMakeFiles/mThread.dir/rule
 
-# Build rule for target.
-mediaplayer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mediaplayer
-.PHONY : mediaplayer
-
-# fast build rule for target.
-mediaplayer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/build
-.PHONY : mediaplayer/fast
-
-#=============================================================================
-# Target rules for targets named mThread
-
-# Build rule for target.
-mThread: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread
+# Convenience name for target.
+mThread: mThread/CMakeFiles/mThread.dir/rule
 .PHONY : mThread
 
 # fast build rule for target.
 mThread/fast:
-	$(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/build
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/build
 .PHONY : mThread/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+mThread.o: mThread.cpp.o
+.PHONY : mThread.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/main.cpp.o
-.PHONY : main.cpp.o
+mThread.cpp.o:
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/mThread.cpp.o
+.PHONY : mThread.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+mThread.i: mThread.cpp.i
+.PHONY : mThread.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/main.cpp.i
-.PHONY : main.cpp.i
+mThread.cpp.i:
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/mThread.cpp.i
+.PHONY : mThread.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+mThread.s: mThread.cpp.s
+.PHONY : mThread.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/main.cpp.s
-.PHONY : main.cpp.s
+mThread.cpp.s:
+	cd /Users/alex/Desktop/mediaplayer/build && $(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/mThread.cpp.s
+.PHONY : mThread.cpp.s
 
 # Help Target
 help:
@@ -175,10 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mThread"
-	@echo "... mediaplayer"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... mThread.o"
+	@echo "... mThread.i"
+	@echo "... mThread.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/alex/Desktop/mediaplayer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

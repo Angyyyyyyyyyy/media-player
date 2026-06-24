@@ -64,33 +64,55 @@ CMAKE_BINARY_DIR = /Users/alex/Desktop/mediaplayer/build
 
 # The main recursive "all" target.
 all: CMakeFiles/mediaplayer.dir/all
+all: mThread/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/mediaplayer.dir/codegen
+codegen: mThread/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: mThread/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/mediaplayer.dir/clean
+clean: mThread/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory mThread
+
+# Recursive "all" directory target.
+mThread/all: mThread/CMakeFiles/mThread.dir/all
+.PHONY : mThread/all
+
+# Recursive "codegen" directory target.
+mThread/codegen: mThread/CMakeFiles/mThread.dir/codegen
+.PHONY : mThread/codegen
+
+# Recursive "preinstall" directory target.
+mThread/preinstall:
+.PHONY : mThread/preinstall
+
+# Recursive "clean" directory target.
+mThread/clean: mThread/CMakeFiles/mThread.dir/clean
+.PHONY : mThread/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/mediaplayer.dir
 
 # All Build rule for target.
-CMakeFiles/mediaplayer.dir/all:
+CMakeFiles/mediaplayer.dir/all: mThread/CMakeFiles/mThread.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=1,2 "Built target mediaplayer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=3,4 "Built target mediaplayer"
 .PHONY : CMakeFiles/mediaplayer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mediaplayer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mediaplayer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 0
 .PHONY : CMakeFiles/mediaplayer.dir/rule
@@ -102,13 +124,45 @@ mediaplayer: CMakeFiles/mediaplayer.dir/rule
 # codegen rule for target.
 CMakeFiles/mediaplayer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=1,2 "Finished codegen for target mediaplayer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=3,4 "Finished codegen for target mediaplayer"
 .PHONY : CMakeFiles/mediaplayer.dir/codegen
 
 # clean rule for target.
 CMakeFiles/mediaplayer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mediaplayer.dir/build.make CMakeFiles/mediaplayer.dir/clean
 .PHONY : CMakeFiles/mediaplayer.dir/clean
+
+#=============================================================================
+# Target rules for target mThread/CMakeFiles/mThread.dir
+
+# All Build rule for target.
+mThread/CMakeFiles/mThread.dir/all:
+	$(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/depend
+	$(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=1,2 "Built target mThread"
+.PHONY : mThread/CMakeFiles/mThread.dir/all
+
+# Build rule for subdir invocation for target.
+mThread/CMakeFiles/mThread.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mThread/CMakeFiles/mThread.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alex/Desktop/mediaplayer/build/CMakeFiles 0
+.PHONY : mThread/CMakeFiles/mThread.dir/rule
+
+# Convenience name for target.
+mThread: mThread/CMakeFiles/mThread.dir/rule
+.PHONY : mThread
+
+# codegen rule for target.
+mThread/CMakeFiles/mThread.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alex/Desktop/mediaplayer/build/CMakeFiles --progress-num=1,2 "Finished codegen for target mThread"
+.PHONY : mThread/CMakeFiles/mThread.dir/codegen
+
+# clean rule for target.
+mThread/CMakeFiles/mThread.dir/clean:
+	$(MAKE) $(MAKESILENT) -f mThread/CMakeFiles/mThread.dir/build.make mThread/CMakeFiles/mThread.dir/clean
+.PHONY : mThread/CMakeFiles/mThread.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
