@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(mediaplayer VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(mediaplayer main.cpp)
+add_executable(mediaplayer "main.cpp" "main.h")
 
